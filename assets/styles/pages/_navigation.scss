@@ -1,0 +1,131 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+.navBar{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 0 50rem 0;
+    @include media('<=tablet'){
+        height: 42rem;
+        top: 20rem;
+    }
+    .img_div{
+        display: flex;
+        justify-content: center;
+        
+    }
+    ul{
+        max-width: 800rem;
+        width: 300rem;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        @include media('<=tablet'){
+            display: none;
+            height: 42rem;
+            top: 100rem;
+            flex-direction: column;
+            text-align: center;
+            gap: 50rem;
+            
+        }
+    }
+    li{
+        display: flex;
+        @include media('<=tablet'){
+            display: block;
+            height: 40rem;
+        }
+    }
+    a{
+        font-size: 12rem;
+        text-decoration:none;
+        color:bisque;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        @include media('<=tablet'){
+            padding: 0;
+            padding: 10rem 20rem;
+        }
+    }
+    a:hover{
+        border-bottom: 1rem solid #08f9ff;
+        transition: 0.1s;
+        @include media('<=tablet'){
+            border-bottom: 2rem solid #08f9ff;
+        }
+    }
+    a.router-link-exact-active{
+        background-color:  #2fc1ff7e; 
+    }
+    img{
+        @include media('<=tablet'){
+            max-width: 110rem;
+            top: -28rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .navBar__Menu{
+        display: none;
+        @include media('<=tablet'){
+            display: block;
+            max-width: 25rem;
+                top: 8rem;
+                left: 20rem;
+        }
+    }
+    .navBar__Button{
+        position: absolute;
+        top: 0;
+        left: 125%;
+        bottom: 0;
+        @include media('<=tablet'){
+            position: relative;
+            left: 0;
+        }
+    }
+}
+
+.navBar__LogoLink:hover, .navBar__LogoLink.router-link-exact-active{
+   
+   border-bottom: 0rem !important;
+   background: none !important;
+   background-color: none !important;
+    
+}
+
+.navBar__MobileMenu{
+    @include media('<=tablet'){
+    position:fixed;
+    top: 0rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    margin:0 auto;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    ul{
+        display: flex;
+    }
+    a{
+        font-size: 20rem;
+    }
+    img{
+        top: 0;
+    }
+    .navBar__Menu{
+        top:32rem;
+    }
+}
+    
+}
+
+
+
+

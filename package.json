@@ -1,0 +1,22 @@
+{
+  "name": "nuxt-app",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@vueuse/motion": "^3.0.3",
+    "emailjs-com": "^3.2.0",
+    "include-media": "^2.0.0",
+    "nuxt": "^4.0.3",
+    "sass": "^1.90.0",
+    "swiper": "^11.2.10",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1"
+  }
+}

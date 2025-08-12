@@ -1,0 +1,113 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+.footerDiv{
+    position:absolute;
+    left: 0;
+    right: 0;
+    height: 600rem;
+    width: 100%;
+    margin:0 auto;
+    background-color: #000000;
+    padding: 10rem 0;
+    @include media('<=tablet'){
+        height: 100rem;
+    }
+    ul{
+        display:flex;
+        gap: 30rem;
+        @include media('<=tablet'){
+            gap: 20rem;
+        }
+        
+    }
+    .footer_about{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        gap: 30rem;
+        margin: 50rem 0;
+        li{
+            font-size: 14rem;
+            width: 70%;
+            padding: 0;
+            line-height: 1.5;
+        }
+    }
+
+    .footer_title{
+        font-size: 16rem !important;
+        font-weight: bold;
+    }
+
+    .footer_link{
+        font-size: 14rem;
+        width: 100%;
+        padding: 0;
+        line-height: 1.5;
+        color: white;
+        font-weight: 100;
+        &:hover{
+        color: #2fc1ff;
+        transition: 0.5s;
+    }
+    }
+
+    .bottom_footer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 500rem;
+        position: absolute;
+        bottom: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: 1rem solid white;
+        padding: 10rem 0;
+        a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h5{width: 300rem;}
+    }
+
+    li{
+        padding: 30rem 0;
+        text-decoration: none;
+        display: flex;
+        color: white;
+        font-size: 15rem;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    a{
+        font-size: 25rem;
+        text-decoration:none;
+        color:bisque;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        
+    }
+    img{
+        max-width: 40rem;
+        background-color: white;
+        border-radius: 50rem;
+        border: 3rem solid;
+        @include media('<=tablet'){
+            max-width: 20rem;
+        }
+    }
+
+    h5{
+        font-size: 15rem;
+        color:white;
+        @include media('<=tablet'){
+           font-size: 8rem;
+         
+           
+        }
+    }
+}
+
+
+
+
