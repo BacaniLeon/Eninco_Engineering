@@ -134,16 +134,16 @@ import emailjs from "emailjs-com";
 const modules = [EffectCoverflow, Pagination, Autoplay];
 
 const photos = [
-    { url: "../resources/images/Certifikat.jpg" },
-    { url: "../resources/images/Certifikat2.jpg" },
-    { url: "../resources/images/Certifikat3.jpg" },
-    { url: "../resources/images/Certifikat4.jpg" },
-    { url: "../resources/images/Certifikat5.jpg" },
-    { url: "../resources/images/Certifikat6.jpg" },
-    { url: "../resources/images/Certifikat7.jpg" },
-    { url: "../resources/images/Certifikat8.jpg" },
-    { url: "../resources/images/Certifikat9.jpg" },
-    { url: "../resources/images/Certifikat10.jpg" }
+  { url: new URL('@/resources/images/Certifikat.png', import.meta.url).href },
+  { url: new URL('@/resources/images/Certifikat2.png', import.meta.url).href },
+  { url: new URL('@/resources/images/Certifikat3.png', import.meta.url).href },
+  { url: new URL('@/resources/images/Certifikat4.png', import.meta.url).href },
+  { url: new URL('@/resources/images/Certifikat5.png', import.meta.url).href },
+  { url: new URL('@/resources/images/Certifikat6.png', import.meta.url).href },
+  { url: new URL('@/resources/images/Certifikat7.png', import.meta.url).href },
+  { url: new URL('@/resources/images/Certifikat8.png', import.meta.url).href },
+  { url: new URL('@/resources/images/Certifikat9.png', import.meta.url).href },
+  { url: new URL('@/resources/images/Certifikat10.png', import.meta.url).href },
   ];
 
   const services = [
