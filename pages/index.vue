@@ -134,16 +134,16 @@ import emailjs from "emailjs-com";
 const modules = [EffectCoverflow, Pagination, Autoplay];
 
 const photos = [
-  { url: "/resources/images/Certifikat.png" },
-  { url: "/resources/images/Certifikat2.png" },
-  { url: "/resources/images/Certifikat3.png" },
-  { url: "/resources/images/Certifikat4.png" },
-  { url: "/resources/images/Certifikat5.png" },
-  { url: "/resources/images/Certifikat6.png" },
-  { url: "/resources/images/Certifikat7.png" },
-  { url: "/resources/images/Certifikat8.png" },
-  { url: "/resources/images/Certifikat9.png" },
-  { url: "/resources/images/Certifikat10.png" },
+  { url: "/resources/images/certifikat.png" },
+  { url: "/resources/images/certifikat2.png" },
+  { url: "/resources/images/certifikat3.png" },
+  { url: "/resources/images/certifikat4.png" },
+  { url: "/resources/images/certifikat5.png" },
+  { url: "/resources/images/certifikat6.png" },
+  { url: "/resources/images/certifikat7.png" },
+  { url: "/resources/images/certifikat8.png" },
+  { url: "/resources/images/certifikat9.png" },
+  { url: "/resources/images/certifikat10.png" },
 ];
 
   const services = [
