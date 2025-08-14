@@ -126,10 +126,11 @@
         padding: 10rem 20rem;
         text-decoration: none;
         @include media("<=tablet"){
-            font-size: 10rem;
+            font-size: 8rem;
             padding: 10rem 15rem;
             width: 80rem;
             margin: 0 0 30rem;
+            text-align: center;
         }
     }
     .work_with_us_button:hover{
