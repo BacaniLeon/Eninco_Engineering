@@ -1,0 +1,25 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+
+.products_intro_section{
+    background-image: url('../../../public/resources/images/background.jpg');
+    background-size: cover;
+}
+
+.products_intro_section_text{
+    display: grid;
+    max-width: 1200rem;
+    margin: 0 auto ;
+    text-align: center;
+    color:white;
+    @include media('<=tablet'){
+        margin: 100rem auto 0rem;
+    }
+    h1{
+        font-size: 80rem;
+        padding: 0 0 100rem;
+        @include media('<=tablet'){
+            font-size:30rem;
+            padding: 10rem;
+        }
+    }
+}

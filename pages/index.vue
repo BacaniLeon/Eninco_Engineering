@@ -33,7 +33,7 @@
         effect="cube"
         :grabCursor="true"
         :centeredSlides="true"
-        :slidesPerView="3"
+        :slidesPerView="2"
         :spaceBetween="100"
         :pagination="{ clickable: true }"
         :navigation="true"

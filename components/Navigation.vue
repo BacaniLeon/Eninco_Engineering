@@ -1,9 +1,9 @@
 <template>
     <nav :class="[{navBar__MobileMenu: menuHidden}, 'navBar']">
     <div class="img_div">
-        <NuxtLink to="/" class="navBar__LogoLink"><img src="../public/resources/images/logo.png"></NuxtLink>
+        <NuxtLink to="/" class="navBar__LogoLink"><img src="../public/resources/images/logo.png" class="LogoLink"></NuxtLink>
+        <img src="../public/resources/images/menu.png" class="navBar__Menu" @click="showMenu">
     </div>
-      <img src="../public/resources/images/menu.png" class="navBar__Menu" @click="showMenu">
         <ul>
             <li><NuxtLink to="/" @click="changeOverflow()">Home</NuxtLink></li>
             <li><NuxtLink to="/products" @click="changeOverflow()" >Products</NuxtLink></li>

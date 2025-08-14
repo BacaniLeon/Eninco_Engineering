@@ -23,11 +23,10 @@
         margin: 0 auto;
         @include media('<=tablet'){
             display: none;
-            height: 42rem;
             top: 100rem;
             flex-direction: column;
             text-align: center;
-            gap: 50rem;
+            gap: 15rem;
             
         }
     }
@@ -39,9 +38,9 @@
         }
     }
     a{
-        font-size: 12rem;
+        font-size: 16rem;
         text-decoration:none;
-        color:bisque;
+        color:white;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
         @include media('<=tablet'){
@@ -50,40 +49,29 @@
         }
     }
     a:hover{
-        border-bottom: 1rem solid #08f9ff;
+        border-bottom: 1rem solid #2fc1ff;
         transition: 0.1s;
         @include media('<=tablet'){
-            border-bottom: 2rem solid #08f9ff;
+            border-bottom: 2rem solid #2fc1ff;
         }
     }
     a.router-link-exact-active{
-        background-color:  #2fc1ff7e; 
+        color: #2fc1ff;
     }
-    img{
+    .LogoLink{
         @include media('<=tablet'){
-            max-width: 110rem;
-            top: -28rem;
-            left: 50%;
-            transform: translateX(-50%);
+            max-width: 150rem;
+            min-height: 110rem;
         }
     }
     .navBar__Menu{
         display: none;
         @include media('<=tablet'){
-            display: block;
-            max-width: 25rem;
-                top: 8rem;
-                left: 20rem;
-        }
-    }
-    .navBar__Button{
-        position: absolute;
-        top: 0;
-        left: 125%;
-        bottom: 0;
-        @include media('<=tablet'){
-            position: relative;
-            left: 0;
+            display:block;
+            position: absolute;
+            max-width: 30rem;
+            top: 50rem;
+            right: 10rem;
         }
     }
 }
@@ -114,13 +102,11 @@
         display: flex;
     }
     a{
-        font-size: 20rem;
+        font-size: 16rem;
     }
-    img{
+    .navBar__LogoLink{
+        position: absolute;
         top: 0;
-    }
-    .navBar__Menu{
-        top:32rem;
     }
 }
     

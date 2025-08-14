@@ -1,7 +1,4 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
-html{
-    overflow-x: hidden;
-}
 
 .intro_section{
     background-image: url('../../../public/resources/images/background.jpg');
@@ -10,29 +7,35 @@ html{
 
 .intro_section_text{
     display: grid;
-    max-width: 800rem;
+    max-width: 1200rem;
     margin: 0 auto 14rem;
+    text-align: center;
     color:white;
     @include media('<=tablet'){
         margin: 100rem auto 14rem;
     }
     h4{
         font-size: 22rem;
+        @include media("<=tablet"){
+            font-size: 14rem;
+        }
     }
     h1{
         font-size: 65rem;
         @include media('<=tablet'){
-            font-size:30rem;
+            font-size:45rem;
             padding: 10rem;
         }
     }
     p{
         font-size: 16rem;
+        margin: 40rem auto;
         font-family: none;
         width: 60%;
-        line-height: 15rem;
         @include media('<=tablet'){
-            font-size: 15rem;
+            margin: 10rem auto;
+            font-size: 12rem;
+            width: 80%;
         }
     }
     img{
@@ -52,6 +55,11 @@ html{
         border: 1.5rem solid white;
         padding: 10rem 20rem;
         text-decoration: none;
+        @include media("<=tablet"){
+            font-size: 10rem;
+            padding: 10rem 10rem;
+            margin: 0 auto;
+        }
     }
     a:hover{
         background-color: #2fc1ff;
@@ -63,34 +71,66 @@ html{
     display: flex;
     max-width: 1200rem;
     margin: -70rem auto 14rem;
+    @include media("<=tablet"){
+        flex-direction: column;
+        max-width: 400rem;
+        margin: -140rem auto 14rem;
+    }
 }
 
 .build_your_dream_section{
     width: 50%;
     background-color: #2fc1ff;
     padding: 30rem;
+    @include media("<=tablet"){
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     h1{
         color: black;
         font-size: 39rem;
         max-width: 400rem;
+        @include media("<=tablet"){
+            font-size: 30rem;
+            text-align: center;
+        }
     }
     h4{
         color: black;
         font-size: 22rem;
         font-weight: bold;
+        @include media("<=tablet"){
+            margin: 30rem auto 10rem;
+            font-size: 14rem;
+            text-align: center;
+        }
     }
     p{
         max-width: 500rem;
         font-size: 16rem;
         color: rgba(90, 63, 1, 0.63);
-        line-height: 20rem;
         margin: 30rem 0;
+        @include media("<=tablet"){
+            width: 80%;
+            margin: 30rem auto;
+            font-size: 12rem;
+            text-align: center;
+        }
     }
     .work_with_us_button{
         font-size: 12rem;
         background-color: black;
         padding: 10rem 20rem;
         text-decoration: none;
+        @include media("<=tablet"){
+            font-size: 10rem;
+            padding: 10rem 10rem;
+            width: 80rem;
+            margin: 0 0 30rem;
+        }
     }
     .work_with_us_button:hover{
         background-color: #2fc1ff;
@@ -102,6 +142,13 @@ html{
     width: 50%;
     background-color: white;
     margin: 30rem 0;
+    @include media("<=tablet"){
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     img{
         width: 80%;
         padding: 50rem;
@@ -113,35 +160,49 @@ html{
     max-width: 800rem;
     margin: 100rem auto;
     padding: 0 0 100rem;
-
+    @include media("<=tablet"){
+        max-width: 400rem;
+        margin: 0 auto;
+    }
     h2 {
         font-size: 26rem;
         text-align: center;
         color: #2fc1ff;
         font-weight: bold;
         font-family: 'Playfair Display', serif;
+        @include media("<=tablet"){
+            font-size: 16rem;
     }
-
+    }
     h1 {
         font-size: 42rem;
         text-align: center;
         color: black;
         font-weight: bold;
         margin: 0 0 50rem 0;
+        @include media("<=tablet"){
+            font-size: 30rem;
+            margin: 0;
     }
-
+    }
+    .swiperDiv{
+        @include media("<=tablet"){
+            max-width: 400rem;
+        }
+    }
     .swiper-slide {
         display: flex;
         justify-content: center;
         padding: 100rem 0 100rem 0;
-
         img {
             width: 300rem;
             transition: transform 0.3s ease, z-index 0.3s ease;
             position: relative;
             z-index: 1;
+            @include media("<=tablet"){
+                width: 150rem;
+            }
         }
-
         img:hover {
             transform: scale(1.5);
             background-color: white;
@@ -163,13 +224,22 @@ html{
 
 .quality_services{
     max-width: 1200rem;
-    margin: -100rem auto 100rem;
+    margin: -100rem auto 0;
     background-color: #7b7e7e3d;
+     @include media("<=tablet"){
+        flex-direction: column;
+        max-width: 400rem;
+    }
     .quality_services_button_plus_title{
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        gap: 20rem;
         margin: 0 0 50rem;
+        @include media("<=tablet"){
+            flex-direction: column;
+            margin: 0;
+        }
         button{
             font-size: 12rem;
             font-weight: bold;
@@ -177,27 +247,40 @@ html{
             background-color: transparent;
             padding: 10rem 20rem;
             cursor:pointer;
+            @include media("<=tablet"){
+            font-size: 10rem;
+            padding: 10rem 10rem;
+            width: 80rem;
+        }
         }
         button:hover{
         background-color: #2fc1ff;
         transition: 0.5s;
+        
     }
     }
     h1{
         color: black;
         font-size: 50rem;
         max-width: 400rem;
+        @include media("<=tablet"){
+            font-size: 30rem;
+            text-align: center;
+        }
        
     }
     h4{
         color: black;
         font-size: 22rem;
         font-weight: bold;
+        @include media("<=tablet"){
+            font-size: 14rem;
+            text-align: center;
+        }
     }
     p{
         font-size: 16rem;
         color: rgb(105, 75, 5);
-        line-height: 20rem;
         margin: 30rem auto;
     }
     .work_with_us_button{
@@ -231,17 +314,23 @@ html{
         max-width: 350rem;
         height: 250rem;
         @include media('<=tablet'){
-            margin: 50rem auto;
+            margin: 30rem auto 10rem;
             max-width: 300rem;
         }
     }
     h2{
         font-size: 28rem;
         margin: 20rem 0;
+        @include media('<=tablet'){
+           font-size: 20rem;
+        }
     }
     p{
         max-width: 300rem;
-        margin: 0 0 40rem 0 ;
+        margin: 0 0 40rem 0;
+        @include media('<=tablet'){
+            font-size: 12rem;
+        }
     }
 }
 
@@ -250,6 +339,9 @@ html{
     display: flex;
     justify-content: center;
     margin:100rem auto;
+    @include media("<=tablet"){
+        margin: 30rem auto;
+    }
     a{
         font-size: 14rem;
         margin: 0 50rem 0 0;
@@ -258,6 +350,11 @@ html{
         color: black;
         padding: 15rem 35rem;
         text-decoration: none;
+        @include media("<tablet"){
+            margin: 0;
+            padding: 10rem 10rem;
+            font-size: 10rem;
+        }
     }
     a:hover{
         background-color: #1d759b;
@@ -274,6 +371,10 @@ html{
     display: flex;
     max-width: 1200rem;
     margin: 70rem auto 80rem;
+    @include media("<=tablet"){
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
 }
 
 .request_quote{
@@ -281,22 +382,29 @@ html{
     background-color: black;
     padding: 30rem;
     justify-content: center;
+    @include media("<=tablet"){
+        width: 100%;
+        padding: 0;
+    }
     h1{
         color: white;
         font-size: 38rem;
         max-width: 400rem;
+        @include media("<=tablet"){
+        font-size: 28rem;
+        padding: 20rem;
+        text-align: center;
     }
-    h4{
-        color: white;
-        font-size: 16rem;
-        font-weight: bold;
     }
     p{
         max-width: 500rem;
         font-size: 15rem;
         color: white;
-        line-height: 20rem;
         margin: 30rem 0;
+        @include media("<=tablet"){
+        font-size: 16rem;
+        text-align: center;
+    }
     }
     .work_with_us_button{
         font-size: 12rem;
@@ -315,6 +423,10 @@ html{
         width: 80%;
         margin: 0 auto;
         font-size: 20rem;
+        @include media("<=tablet"){
+        align-items: center;
+        margin: 0 auto 30rem;
+        }
         input{
             font-size: 16rem;
             padding: 10rem;
@@ -332,6 +444,11 @@ html{
             background-color: white;
             padding: 10rem 20rem;
             cursor:pointer;
+            @include media("<=tablet"){
+                font-size: 12rem;
+                max-width: 100rem;
+                padding: 5rem 10rem;
+    }
         }
         button:hover{
         background-color: #2fc1ff;
@@ -344,20 +461,40 @@ html{
     width: 50%;
     background-color: rgb(226, 226, 226);
     margin: 70rem 0;
+    @include media("<=tablet"){
+        width: 100%;
+    }
     h4{
         font-size: 20rem;
         margin: 10rem 0 20rem 50rem;
+        @include media("<=tablet"){
+            font-size: 16rem;
+            margin: 20rem 0;
+            text-align: center;
+    }
     }
     h1{
         font-size: 40rem;
         width: 60%;
         margin: 0 0 0 50rem;
         color: black;
+        @include media("<=tablet"){
+            width: 100%;
+            font-size: 30rem;
+            margin: 20rem 0;
+            text-align: center;
+    }
     }
     h2{
         font-size: 26rem;
         font-weight: bold;
         margin: 50rem 0 0 50rem;
+        @include media("<=tablet"){
+            width: 100%;
+            font-size: 20rem;
+            margin: 20rem 0;
+            text-align: center;
+    }
     }
 }
 
