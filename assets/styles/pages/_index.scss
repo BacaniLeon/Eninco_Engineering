@@ -153,6 +153,9 @@
     img{
         width: 80%;
         padding: 50rem;
+        @include media("<=tablet"){
+            padding: 0;
+        }
         
     }
 }

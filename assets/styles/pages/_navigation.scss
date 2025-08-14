@@ -23,10 +23,15 @@
         margin: 0 auto;
         @include media('<=tablet'){
             display: none;
+            width: 100%;
             top: 100rem;
             flex-direction: column;
             text-align: center;
             gap: 15rem;
+            margin-block-start: 0rem;
+            margin-block-end: 0rem;
+            margin-inline-start: 0rem;
+            padding-inline-start: 0rem;
             
         }
     }
