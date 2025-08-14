@@ -1,11 +1,28 @@
 <template>
     <BackToTop/>
     <div class="products_intro_section">
-        <Navigation/>
-        <div class="products_intro_section_text">
-            <h1>PRODUCTS</h1>
-        </div>
+      <Navigation/>
+      <div class="products_intro_section_text">
+        <h1>PRODUCTS</h1>
+      </div>
     </div>
+
+    <div class="our_products">
+      <h4>Our Products</h4>
+      <h1>Eninco Originals</h1>
+    </div>
+
+    <div class="list_of_products_flex">
+  <div
+    class="list_of_products"
+    v-for="product in products"
+    :key="product.id"
+    :style="{ backgroundImage: `url(${product.photo})` }"
+  >
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.paragraf }}</p>
+  </div>
+</div>
         
     <Footer/>
 
@@ -22,96 +39,36 @@ import emailjs from "emailjs-com";
 
 const modules = [EffectCoverflow, Pagination, Autoplay];
 
-const photos = [
-  { url: "/resources/images/certifikat.png" },
-  { url: "/resources/images/certifikat2.png" },
-  { url: "/resources/images/certifikat3.png" },
-  { url: "/resources/images/certifikat4.png" },
-  { url: "/resources/images/certifikat5.png" },
-  { url: "/resources/images/certifikat6.png" },
-  { url: "/resources/images/certifikat7.png" },
-  { url: "/resources/images/certifikat8.png" },
-  { url: "/resources/images/certifikat9.png" },
-  { url: "/resources/images/certifikat10.png" },
-];
-
-  const services = [
+  const products = [
   {
-    title: "Consulting Services",
+    title: "SUPER LOTUS",
     paragraf:
-      "Coating Selection, Application Method Selection and Coating Consumption Management. ",
-    photo: "../resources/images/consulting.jpg",
+      "Wood Lacquer",
+    photo: "../resources/images/product.jpg",
   },
 
   {
-    title: "Educational Services",
+    title: "ETERNAL",
     paragraf:
-      "Variety of Training Courses.",
-    photo: "../resources/images/education.jpg",
+      "Metal Coating",
+    photo: "../resources/images/product.jpg",
   },
 
   {
-    title: "Inspection Services",
+    title: "ENIWALL",
     paragraf:
-      "Quality Control and more.",
-    photo: "../resources/images/inspection.jpg",
+      "Wall Paint",
+    photo: "../resources/images/product.jpg",
   },
 
   {
-    title: "Post-Sales Services",
+    title: "ACRYLCOAT",
     paragraf:
-      "Product Warranty and After-sales Support",
-    photo: "../resources/images/post_sale.jpg",
-  },
-
-  {
-    title: "Post-Sales Services",
-    paragraf:
-      "Product Warranty and After-sales Support",
-    photo: "../resources/images/post_sale.jpg",
-  },
-
-  {
-    title: "Post-Sales Services",
-    paragraf:
-      "Product Warranty and After-sales Support",
-    photo: "../resources/images/post_sale.jpg",
-  },
-
-  {
-    title: "Post-Sales Services",
-    paragraf:
-      "Product Warranty and After-sales Support",
-    photo: "../resources/images/post_sale.jpg",
-  },
-
-  {
-    title: "Post-Sales Services",
-    paragraf:
-      "Product Warranty and After-sales Support",
-    photo: "../resources/images/post_sale.jpg",
-  },
-
-  {
-    title: "Post-Sales Services",
-    paragraf:
-      "Product Warranty and After-sales Support",
-    photo: "../resources/images/post_sale.jpg",
-  },
-
-  {
-    title: "Post-Sales Services",
-    paragraf:
-      "Product Warranty and After-sales Support",
-    photo: "../resources/images/post_sale.jpg",
-  },
+      "Plastic Coating",
+    photo: "../resources/images/product.jpg",
+  }
 ];
 const showAll = ref(false);
-
-const displayedServices = computed(() => {
-  return showAll.value ? services : services.slice(0, 3);
-});
-
 
 const form = reactive({
   name: "",
