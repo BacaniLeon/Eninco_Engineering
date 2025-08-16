@@ -1,388 +1,157 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
 
-.intro_section{
-    background-image: url('../../../public/resources/images/background.jpg');
-    background-size: cover;
+.contact_intro_section{
+    background-image: url('../../../public/resources/images/contact_us.jpg');
+    background-size:cover;
+    background-position: 0rem;
+    background-color: rgba(0, 0, 0, 0.6); 
+    background-blend-mode: darken;
+    @include media("<=tablet"){
+        background-position: 0 -250rem;
+    }
 }
 
-.intro_section_text{
+.contact_intro_section_title{
     display: grid;
     max-width: 1200rem;
-    margin: 0 auto 14rem;
+    margin: 0 auto ;
     text-align: center;
     color:white;
     @include media('<=tablet'){
-        margin: 100rem auto 14rem;
-    }
-    h4{
-        font-size: 22rem;
-        @include media("<=tablet"){
-            font-size: 14rem;
-        }
+        margin: 50rem auto 0rem;
     }
     h1{
-        font-size: 65rem;
+        font-size: 80rem;
+        padding: 0 0 100rem;
         @include media('<=tablet'){
-            font-size:45rem;
+            font-size:40rem;
             padding: 10rem;
         }
     }
-    p{
-        font-size: 16rem;
-        margin: 40rem auto;
-        font-family: none;
-        width: 60%;
-        @include media('<=tablet'){
-            margin: 10rem auto;
-            font-size: 12rem;
-            width: 80%;
-        }
-    }
-    img{
-        margin: auto;
-        width: 150rem;
-    };
 }
 
-.intro_section_buttons{
-    display: flex;
-    max-width: 800rem;
-    margin: 0 auto;
-    padding: 0 0 200rem;
-    a{
-        font-size: 16rem;
-        margin: 0 50rem 0 0;
-        border: 1.5rem solid white;
-        padding: 10rem 20rem;
-        text-decoration: none;
-        @include media("<=tablet"){
-            font-size: 10rem;
-            padding: 10rem 10rem;
-            margin: 0 auto;
-        }
-    }
-    a:hover{
-        background-color: #2fc1ff;
-        transition: 0.5s;
-    }
-}
-
-.build_your_dream_with_img{
-    display: flex;
-    max-width: 1200rem;
-    margin: -70rem auto 14rem;
-    @include media("<=tablet"){
-        flex-direction: column;
-        max-width: 400rem;
-        margin: -140rem auto 14rem;
-    }
-}
-
-.build_your_dream_section{
-    width: 50%;
-    background-color: #2fc1ff;
-    padding: 30rem;
-    @include media("<=tablet"){
-        width: 100%;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    h1{
-        color: black;
-        font-size: 39rem;
-        max-width: 400rem;
-        @include media("<=tablet"){
-            font-size: 30rem;
-            text-align: center;
-        }
-    }
-    h4{
-        color: black;
-        font-size: 22rem;
-        font-weight: bold;
-        @include media("<=tablet"){
-            margin: 30rem auto 10rem;
-            font-size: 14rem;
-            text-align: center;
-        }
-    }
-    p{
-        max-width: 500rem;
-        font-size: 16rem;
-        color: rgba(90, 63, 1, 0.63);
-        margin: 30rem 0;
-        @include media("<=tablet"){
-            width: 80%;
-            margin: 30rem auto;
-            font-size: 12rem;
-            text-align: center;
-        }
-    }
-    .work_with_us_button{
-        font-size: 12rem;
-        background-color: black;
-        padding: 10rem 20rem;
-        text-decoration: none;
-        @include media("<=tablet"){
-            font-size: 8rem;
-            padding: 10rem 15rem;
-            width: 80rem;
-            margin: 0 0 30rem;
-            text-align: center;
-        }
-    }
-    .work_with_us_button:hover{
-        background-color: #2fc1ff;
-        transition: 0.5s;
-    }
-}
-
-.build_your_dream_image{
-    width: 50%;
-    background-color: white;
-    margin: 30rem 0;
-    @include media("<=tablet"){
-        width: 100%;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    img{
-        width: 80%;
-        padding: 50rem;
-        @include media("<=tablet"){
-            padding: 0;
-        }
-        
-    }
-}
-
-.trust_and_worth {
-    max-width: 800rem;
-    margin: 100rem auto;
-    padding: 0 0 100rem;
-    @include media("<=tablet"){
-        max-width: 400rem;
-        margin: 0 auto;
-    }
-    h2 {
-        font-size: 26rem;
-        text-align: center;
-        color: #2fc1ff;
-        font-weight: bold;
-        font-family: 'Playfair Display', serif;
-        @include media("<=tablet"){
-            font-size: 16rem;
-    }
-    }
-    h1 {
-        font-size: 42rem;
-        text-align: center;
-        color: black;
-        font-weight: bold;
-        margin: 0 0 50rem 0;
-        @include media("<=tablet"){
-            font-size: 30rem;
-            margin: 0;
-    }
-    }
-    .swiperDiv{
-        @include media("<=tablet"){
-            max-width: 400rem;
-        }
-    }
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-        padding: 100rem 0 100rem 0;
-        img {
-            width: 300rem;
-            transition: transform 0.3s ease, z-index 0.3s ease;
-            position: relative;
-            z-index: 1;
-            @include media("<=tablet"){
-                width: 150rem;
-            }
-        }
-        img:hover {
-            transform: scale(1.5);
-            background-color: white;
-            z-index: 1001;
-        }
-    }
-
-    .swiper-slide:hover {
-        z-index: 1001 !important;
-    }
-
-    .swiper-slide:hover ~ &::before,
-    .swiper-slide:hover + &::before,
-    .swiper-slide:hover &::before {
-        opacity: 1;
-    }
-}
-
-.quality_services{
-    max-width: 1200rem;
-    margin: -100rem auto 0;
-    background-color: #7b7e7e3d;
-     @include media("<=tablet"){
-        flex-direction: column;
-        max-width: 400rem;
-    }
-    .quality_services_button_plus_title{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 20rem;
-        margin: 0 0 50rem;
-        @include media("<=tablet"){
-            flex-direction: column;
-            margin: 0;
-        }
-        button{
-            font-size: 12rem;
-            font-weight: bold;
-            border: none;
-            background-color: transparent;
-            padding: 10rem 20rem;
-            cursor:pointer;
-            @include media("<=tablet"){
-            font-size: 10rem;
-            padding: 10rem 10rem;
-            width: 80rem;
-        }
-        }
-        button:hover{
-        background-color: #2fc1ff;
-        transition: 0.5s;
-        
-    }
-    }
-    h1{
-        color: black;
-        font-size: 50rem;
-        max-width: 400rem;
-        @include media("<=tablet"){
-            font-size: 30rem;
-            text-align: center;
-        }
-       
-    }
-    h4{
-        color: black;
-        font-size: 22rem;
-        font-weight: bold;
-        @include media("<=tablet"){
-            font-size: 14rem;
-            text-align: center;
-        }
-    }
-    p{
-        font-size: 16rem;
-        color: rgb(105, 75, 5);
-        margin: 30rem auto;
-    }
-    .work_with_us_button{
-        font-size: 12rem;
-        background-color: black;
-        padding: 10rem 20rem;
-        text-decoration: none;
-    }
-    .work_with_us_button:hover{
-        background-color: #2fc1ff;
-        transition: 0.5s;
-    }
-    .quality_services_adjusting{
-        padding: 30rem;
-    }
-}
-
-.services_flex{
-    max-width: 1200rem;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.services__Facts{
-    max-width: 380rem;
+.our_branches{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    img{
-        max-width: 350rem;
-        height: 250rem;
-        @include media('<=tablet'){
-            margin: 30rem auto 10rem;
-            max-width: 300rem;
+    h4{
+        font-size: 24rem;
+        text-align: center;
+        margin: 50rem 0 0;
+        @include media("<=tablet"){
+            margin: 50rem 0 0;
+            font-size: 16rem;
         }
     }
     h2{
-        font-size: 28rem;
-        margin: 20rem 0;
-        @include media('<=tablet'){
-           font-size: 20rem;
-        }
-    }
-    p{
-        max-width: 300rem;
-        margin: 0 0 40rem 0;
-        @include media('<=tablet'){
-            font-size: 12rem;
-        }
-    }
-}
-
-.about_us_button{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin:100rem auto;
-    @include media("<=tablet"){
-        margin: 30rem auto;
-    }
-    a{
-        font-size: 14rem;
-        margin: 0 50rem 0 0;
-        border: 1.5rem solid white;
-        background-color: #2fc1ff;
         color: black;
-        padding: 15rem 35rem;
-        text-decoration: none;
-        @include media("<tablet"){
-            margin: 0;
-            padding: 10rem 10rem;
-            font-size: 10rem;
+        font-size: 36rem;
+        text-align: center;
+        margin: 10rem auto 10rem;
+        @include media("<=tablet"){
+            font-size: 28rem;
+            margin: 10rem auto 50rem;
         }
     }
-    a:hover{
-        background-color: #1d759b;
-        transition: 0.5s;
-    }
 }
 
-.request_quote_and_faq_background{
-    background-image: url("../../../public/resources/images/background2.jpg");
-    padding: 10rem;
-}
-
-.request_quote_and_faq{
+.head_office_and_map{
     display: flex;
-    max-width: 1200rem;
-    margin: 70rem auto 80rem;
+    margin: 40rem 150rem;
+    border-top: 1rem solid grey;
+    border-bottom: 1rem solid grey;
     @include media("<=tablet"){
-        flex-direction: column-reverse;
+        flex-direction: column;
+        width: 100%;
         margin: 0 auto;
     }
 }
 
-.request_quote{
+.head_office{
+    padding: 50rem 0;
+    max-width: 40%;
+    @include media("<=tablet"){
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    h2{
+        font-size: 28rem;
+        width: 65%;
+        @include media("<=tablet"){
+            text-align: center;
+            width: 100%;
+            font-size: 24rem;
+            margin: 0 auto 30rem;
+        }
+    }
+    h4{
+        font-size: 22rem;
+        color: black;
+        width: 80%;
+        text-align: center;
+        margin: 40rem 0 20rem;
+        @include media("<=tablet"){
+            font-size: 18rem;
+            margin: 0 auto 20rem;
+        }
+    }
+    p{
+        font-size: 16rem;
+        width: 80%;
+        text-align: center;
+        margin: 0;
+        @include media("<=tablet"){
+            font-size: 14rem;
+            margin: 0 auto 10rem;
+        }
+    }
+}
+
+.map{
+    padding: 100rem 0;
+    width: 60%;
+    @include media("<=tablet"){
+        margin: 0 auto;
+        width: 90%;
+        padding: 0;
+        }
+    iframe{
+        width: 100%;
+        height: 400rem;
+        @include media("<=tablet"){
+            height: 300rem;
+        }
+    }
+}
+
+.contact_us_form_with_picture{
+    display: flex;
+    width: 100%;
+    background-color: #f3f6f6;
+    @include media("<=tablet"){
+        flex-direction: column;
+    }
+}
+
+.contact_us_form_picture{
     width: 50%;
-    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media("<=tablet"){
+        width: 100%;
+        margin: 40rem 0 0;
+    }
+    img{
+        width: 450rem;
+        height: 300rem;
+        @include media("<=tablet"){
+            width: 80%;
+            height: 60%;
+        }
+    }
+}
+
+.contact_us_form{
+    width: 50%;
     padding: 30rem;
     justify-content: center;
     @include media("<=tablet"){
@@ -390,9 +159,10 @@
         padding: 0;
     }
     h1{
-        color: white;
+        color: black;
         font-size: 38rem;
-        max-width: 400rem;
+        margin: 0 auto;
+        padding: 30rem 65rem;
         @include media("<=tablet"){
         font-size: 28rem;
         padding: 20rem;
@@ -439,13 +209,13 @@
             min-height: 150rem;
         }
         button{
-            font-size: 14rem;
+            font-size: 18rem;
             max-width: 200rem;
-            font-weight: bold;
             border: none;
             color: black;
-            background-color: white;
+            background-color: #2fc1ff;
             padding: 10rem 20rem;
+            font-family: 'Playfair Display',serif;
             cursor:pointer;
             @include media("<=tablet"){
                 font-size: 12rem;
@@ -454,89 +224,12 @@
     }
         }
         button:hover{
-        background-color: #2fc1ff;
+        background-color: #2fc1ffa6;
         transition: 0.5s;
     }
     }
 }
 
-.faq{
-    width: 50%;
-    background-color: rgb(226, 226, 226);
-    margin: 70rem 0;
-    @include media("<=tablet"){
-        width: 100%;
-    }
-    h4{
-        font-size: 20rem;
-        margin: 10rem 0 20rem 50rem;
-        @include media("<=tablet"){
-            font-size: 16rem;
-            margin: 20rem 0;
-            text-align: center;
-    }
-    }
-    h1{
-        font-size: 40rem;
-        width: 60%;
-        margin: 0 0 0 50rem;
-        color: black;
-        @include media("<=tablet"){
-            width: 100%;
-            font-size: 30rem;
-            margin: 20rem 0;
-            text-align: center;
-    }
-    }
-    h2{
-        font-size: 26rem;
-        font-weight: bold;
-        margin: 50rem 0 0 50rem;
-        @include media("<=tablet"){
-            width: 100%;
-            font-size: 20rem;
-            margin: 20rem 0;
-            text-align: center;
-    }
-    }
-}
-
-.faq_faq {
-  max-width: 80%;
-  margin: 20rem auto;
-  font-family: Arial, sans-serif;
-
-  .faq-item {
-    max-width: 600rem;
-    border-bottom: 1rem solid #ccc;
-    padding: 15rem 0;
-    cursor: pointer;
-
-    &.open .faq-question {
-      color: #2fc1ff;
-    }
-
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      font-weight: bold;
-      font-size: 14rem;
-      transition: color 0.3s ease;
-    }
-
-    .faq-answer {
-      margin-top: 10rem;
-      font-size: 12rem;
-      color: #000000;
-      line-height: 1.4;
-    }
-
-    .arrow {
-      font-size: 20rem;
-    }
-  }
-}
-
-a{
-    color: white;
+.success{
+    color: black !important;
 }
