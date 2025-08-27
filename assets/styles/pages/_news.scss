@@ -1,9 +1,9 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
 
 .news_intro_section{
-    background-image: url('../../../public/resources/images/about_us.jpg');
+    background-image: url('../../../public/resources/images/news.jpg');
     background-size: cover;
-    background-position: 0 -330rem;
+    background-position: 0 -250rem;
     background-color: rgba(0, 0, 0, 0.6); 
     background-blend-mode: darken;
     @include media("<=tablet"){
@@ -172,12 +172,28 @@
     transition: 0.5s;  
     }
 
+.return_to_news{
+    width: 35%;
+    font-size: 18rem;
+    display: flex;
+    justify-content: center;
+    margin: 30rem;
+    @include media("<tablet"){
+        font-size: 14rem;
+    }
+    a{
+        color: black;
+        cursor: pointer;
+    }
+}
+
 .news_page_single_article{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 50rem 0 0;
+    color: black;
     @include media("<=tablet"){
         width: 80%;
         margin: 50rem auto;
@@ -195,6 +211,9 @@
         font-size: 12rem;
         text-align: center;
     }
+    }
+    a{
+        color: black;
     }
 }
 
@@ -231,7 +250,7 @@
 }
 
 .news_single_article_intro_section{
-    background-image: url('../../../public/resources/images/about_us.jpg');
+    background-image: url('../../../public/resources/images/news.jpg');
     background-size: cover;
     background-position: 0 -330rem;
     background-color: rgba(0, 0, 0, 0.6); 

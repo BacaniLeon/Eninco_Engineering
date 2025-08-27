@@ -2,21 +2,25 @@
     <div class="news_single_article_intro_section">
         <Navigation/>
     </div>
-  <div v-if="article" class="news_page_single_article">
-    <div class="news_page_single_article_photo" v-if="article.photo">
-          <img :src="article.photo" />
-          </div>
-          <h3>{{ article.title }}</h3>
-          <div class="news_page_single_article_calendar">
-              <img :src="article.calendar" />
-              <h4>|</h4>
-              <h4>{{ article.date }}</h4>
-          </div>
-          <p v-html="article.paragraf"></p>
-  </div>
-  <div v-else>
-    <p>Article not found.</p>
-  </div>
+    <div class="return_to_news">
+        <NuxtLink to="/news">Return to all news</NuxtLink>
+    </div>
+    <div v-if="article" class="news_page_single_article">
+        <div class="news_page_single_article_photo" v-if="article.photo">
+            <img :src="article.photo" />
+            </div>
+            <h3>{{ article.title }}</h3>
+            <div class="news_page_single_article_calendar">
+                <img :src="article.calendar" />
+                <h4>|</h4>
+                <h4>{{ article.date }}</h4>
+            </div>
+            <p v-html="article.paragraf"></p>
+    </div>
+    <div v-else>
+        <p>Article not found.</p>
+    </div>
+  <Footer/>
 </template>
 
 <script setup>
