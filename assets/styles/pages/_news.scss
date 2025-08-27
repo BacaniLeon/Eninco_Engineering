@@ -1,0 +1,243 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+
+.news_intro_section{
+    background-image: url('../../../public/resources/images/about_us.jpg');
+    background-size: cover;
+    background-position: 0 -330rem;
+    background-color: rgba(0, 0, 0, 0.6); 
+    background-blend-mode: darken;
+    @include media("<=tablet"){
+        background-position: 0 -250rem;
+    }
+}
+
+.news_page_title{
+    display: grid;
+    max-width: 1200rem;
+    margin: 0 auto ;
+    text-align: center;
+    color:white;
+    @include media('<=tablet'){
+        margin: 50rem auto 0rem;
+    }
+    h1{
+        font-size: 80rem;
+        padding: 0 0 100rem;
+        @include media('<=tablet'){
+            font-size:40rem;
+            padding: 10rem;
+        }
+    }
+}
+
+.news_page_news{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 30rem;
+    margin: 40rem 0 0;
+    @include media("<=tablet"){
+       padding: 20rem
+    }
+    h3{
+        font-size: 30rem;
+        @include media("<=tablet"){
+        font-size: 24rem;
+        text-align: center;
+    }
+    }
+}
+
+.news_page_articles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(123, 126, 126, 0.2392156863);
+    max-width: 380rem;
+    padding: 20rem;
+    margin: 0 0 50rem;
+    color: black;
+    text-decoration: none;
+    @include media("<=tablet"){
+       padding: 0;
+       margin: 0 0 20rem;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    a:hover{
+        background-color:transparent;
+    }
+    p{
+        margin: 50rem 0 0;
+        font-size: 14rem;
+        line-height: 1.8;
+        text-align: justify;
+        @include media("<=tablet"){
+        font-size: 11rem;
+        line-height: 1.8;
+        margin: 0;
+        padding: 30rem;
+    }
+    }
+    h5{
+        font-size: 18rem;
+        color: black;
+        margin: 50rem 0 0;
+        text-decoration: underline;
+        @include media("<=tablet"){
+        font-size: 14rem;
+        line-height: 1.8;
+        margin: 0;
+        padding: 30rem;
+    }
+    }
+}
+
+.news_page_articles_photo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    a{
+        text-decoration: none;
+        margin: 20rem 0 0;
+    }
+    @include media("<=tablet"){
+        width: 300rem;
+        height: 200rem;
+    }
+    img{
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+
+.news_page_calendar{
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    h4{
+        color: black;
+        font-size: 14rem;
+        text-align: center;
+        margin: 0;
+        @include media("<=tablet"){
+        font-size: 10rem;
+    }
+    }
+    img{
+        width: 15rem;
+        height: 15rem;
+        @include media("<=tablet"){
+        width: 10rem;
+        height: 10rem;
+    }
+    }
+}
+
+.news_button_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50rem auto;
+    @include media("<=tablet"){
+       margin: 0 auto 30rem;
+    }
+}
+
+.news_button{
+    font-size: 12rem; 
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    padding: 10rem 20rem;
+    color: black;
+    text-decoration: none;
+    cursor:pointer;
+    @include media("<=tablet"){
+    font-size: 10rem;
+    padding: 10rem 10rem;
+    width: 80rem;
+    }
+    }
+    button:hover{
+    background-color: #2fc1ff;
+    transition: 0.5s;  
+    }
+    a:hover{
+    background-color: #2fc1ff;
+    transition: 0.5s;  
+    }
+
+.news_page_single_article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50rem 0 0;
+    @include media("<=tablet"){
+        width: 80%;
+        margin: 50rem auto;
+    }
+    h3{
+        font-size: 50rem;
+        @include media("<=tablet"){
+        font-size: 30rem;
+        text-align: center;
+    }
+    }
+    p{
+        font-size: 20rem;
+        @include media("<=tablet"){
+        font-size: 12rem;
+        text-align: center;
+    }
+    }
+}
+
+.news_page_single_article_photo{
+    max-width: 1000rem;
+    img{
+        width: 100%;
+    }
+
+}
+
+.news_page_single_article_calendar{
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    margin: 0 0 30rem ;
+    h4{
+        color: black;
+        font-size: 24rem;
+        text-align: center;
+        margin: 0;
+        @include media("<=tablet"){
+        font-size: 12rem;
+    }
+    }
+    img{
+        width: 30rem;
+        height: 30rem;
+        @include media("<=tablet"){
+        width: 15rem;
+        height: 15rem;
+    }
+    }
+}
+
+.news_single_article_intro_section{
+    background-image: url('../../../public/resources/images/about_us.jpg');
+    background-size: cover;
+    background-position: 0 -330rem;
+    background-color: rgba(0, 0, 0, 0.6); 
+    background-blend-mode: darken;
+    @include media("<=tablet"){
+        background-position: 0 -250rem;
+        padding: 0 0 115rem;
+    }
+}

@@ -8,6 +8,7 @@
             <li><NuxtLink to="/" @click="changeOverflow()">Home</NuxtLink></li>
             <li><NuxtLink to="/products" @click="changeOverflow()" >Products</NuxtLink></li>
             <li><NuxtLink to="/about" @click="changeOverflow()">About</NuxtLink></li>
+            <li><NuxtLink to="/news" @click="changeOverflow()">News</NuxtLink></li>
             <li><NuxtLink to="/contact" @click="changeOverflow()">Contact</NuxtLink></li>
         </ul>
     </nav>
