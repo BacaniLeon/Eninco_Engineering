@@ -243,24 +243,6 @@
             flex-direction: column;
             margin: 0;
         }
-        button{
-            font-size: 12rem;
-            font-weight: bold;
-            border: none;
-            background-color: transparent;
-            padding: 10rem 20rem;
-            cursor:pointer;
-            @include media("<=tablet"){
-            font-size: 10rem;
-            padding: 10rem 10rem;
-            width: 80rem;
-        }
-        }
-        button:hover{
-        background-color: #2fc1ff;
-        transition: 0.5s;
-        
-    }
     }
     h1{
         color: black;
@@ -300,6 +282,30 @@
         padding: 30rem;
     }
 }
+
+.quality_services_buttons{
+    font-size: 12rem; 
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    padding: 10rem 20rem;
+    color: black;
+    text-decoration: none;
+    cursor:pointer;
+    @include media("<=tablet"){
+    font-size: 10rem;
+    padding: 10rem 10rem;
+    width: 80rem;
+    }
+    }
+    button:hover{
+    background-color: #2fc1ff;
+    transition: 0.5s;  
+    }
+    a:hover{
+    background-color: #2fc1ff;
+    transition: 0.5s;  
+    }
 
 .services_flex{
     max-width: 1200rem;

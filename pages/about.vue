@@ -85,8 +85,26 @@
         </SwiperSlide>
       </Swiper>
     </div>
-  </div>
-    
+
+    <div class="news" id="news">
+      <h2>News</h2>
+      <div class="news_articles" v-for="(article, index) in displayedArticles" :key="index">
+            <div class="news_articles_photo" v-if="article.photo">
+                <img :src="article.photo" />
+            </div>
+            <h3>{{ article.title }}</h3>
+            <div class="calendar">
+              <img :src="article.calendar"/>
+              <h4>|</h4>
+              <h4>{{article.date}}</h4> 
+            </div>
+            <p v-html="article.paragraf"></p>
+        </div>
+           <button class="quality_services_buttons" v-if="!showAll && articles.length > 3" @click="showAll = true">VIEW ALL</button>
+        <NuxtLink to="#news" class="quality_services_buttons" v-if="showAll && articles.length > 3" @click="showAll = false">SHOW LESS</NuxtLink>
+    </div>
+
+  </div>  
         
     <Footer/>
 
@@ -149,5 +167,23 @@ const photos = [
     photo: "../resources/images/Ivan.jpg",
   }
 ];
+
+const articles = [
+{
+    title: "Interview with our founder",
+    date: "27.8.2025",
+    calendar: "../resources/images/calendar.png",
+    paragraf:
+     'Our Founder and CEO Arezoo Assarian was interviewed last week by Inspenet TV. We are so proud of our CEO and we hope you check out the interview! <br> <a href="https://inspenet.com/video-tv/recubrimientos-inteligentes-industriales" target="_blank">Watch Interview</a>',
+    photo: "../resources/images/interview.jpg",
+  },
+
+];
+
+const showAll = ref(false);
+
+const displayedArticles = computed(() => {
+  return showAll.value ? articles : articles.slice(0, 3);
+});
 
 </script>

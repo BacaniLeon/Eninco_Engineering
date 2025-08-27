@@ -55,13 +55,11 @@
     </div>
   </div>
 
-  <div class="quality_services">
+  <div class="quality_services" id="quality_services">
   <div class="quality_services_adjusting">
       <h4>Build Your Dream</h4>
       <div class="quality_services_button_plus_title">
       <h1>Quality Services</h1>
-        <button v-if="!showAll && services.length > 3" @click="showAll = true">VIEW ALL</button>
-        <button v-else-if="showAll && services.length > 3" @click="showAll = false">SHOW LESS</button>
       </div>
       <div class="services_flex">
         <div class="services__Facts" v-for="(service, index) in displayedServices" :key="index">
@@ -70,6 +68,8 @@
           <p>{{ service.paragraf }}</p>
         </div>
       </div>
+      <button class="quality_services_buttons" v-if="!showAll && services.length > 3" @click="showAll = true">VIEW ALL</button>
+      <NuxtLink to="#quality_services" class="quality_services_buttons" v-if="showAll && services.length > 3" @click="showAll = false">SHOW LESS</NuxtLink>
     </div>
   </div>
 
