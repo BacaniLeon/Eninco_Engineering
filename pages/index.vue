@@ -119,7 +119,7 @@
   </div>
 </div>
   <Footer/>
-
+<Analytics />
 </template>
 
 <script setup>
@@ -130,6 +130,7 @@ import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import { reactive, ref } from "vue";
 import emailjs from "emailjs-com";
+import { Analytics } from '@vercel/analytics/nuxt'
 
 const modules = [EffectCoverflow, Pagination, Autoplay];
 
