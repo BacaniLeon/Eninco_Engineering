@@ -16,6 +16,9 @@
         <div class="news_page_articles_photo" v-if="article.photo">
         <NuxtLink :to="`/news/${index+1}`"><img :src="article.photo" /></NuxtLink>
         </div>
+        <div class="news_page_articles_photo" v-if="article.thumbnail">
+        <NuxtLink :to="`/news/${index+1}`"><img :src="article.thumbnail" /></NuxtLink>
+        </div>
         <NuxtLink :to="`/news/${index+1}`"><h3>{{ article.title }}</h3></NuxtLink>
         <div class="news_page_calendar">
             <img :src="article.calendar" />

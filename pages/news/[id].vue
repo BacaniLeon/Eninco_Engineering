@@ -8,7 +8,10 @@
     <div v-if="article" class="news_page_single_article">
         <div class="news_page_single_article_photo" v-if="article.photo">
             <img :src="article.photo" />
-            </div>
+        </div>
+        <div class="news_page_single_article_video" v-if="article.video">
+            <iframe :src=article.video allowfullscreen></iframe>
+        </div>
             <h3>{{ article.title }}</h3>
             <div class="news_page_single_article_calendar">
                 <img :src="article.calendar" />
