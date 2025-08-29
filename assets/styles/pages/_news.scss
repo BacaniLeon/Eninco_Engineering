@@ -83,11 +83,17 @@
     a:hover{
         background-color:transparent;
     }
+    h3{
+        width: 90%;
+        margin: 30rem auto;
+        text-align: center;
+    }
     p{
         margin: 50rem 0 0;
         font-size: 14rem;
         line-height: 1.8;
         text-align: justify;
+        width: 80%;
         @include media("<=tablet"){
         font-size: 11rem;
         line-height: 1.8;
